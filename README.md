@@ -11,8 +11,8 @@ A javascript library for generating PUFFScoin Decentralized Name Service (ENS) n
 
 ```javascript
 var namehash = require('puffs-ens-namehash')
-var hash = namehash.hash('foo.eth')
-// '0xde9b09fd7c5f901e23a3f19fecc54828e9c848539801e86591bd9801b019f84f'
+var hash = namehash.hash('hightimes.puffs')
+// '0x97d646968c2906f9cdd7541c82c3491b41e5142cd8ef658961ebf85dbe3d719b'
 
 // Also supports normalizing strings to ENS compatibility:
 var input = getUserInput()
