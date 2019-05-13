@@ -1,17 +1,16 @@
-# Eth ENS Namehash [![CircleCI](https://circleci.com/gh/danfinlay/eth-ens-namehash.svg?style=svg)](https://circleci.com/gh/danfinlay/eth-ens-namehash)
+# PUFFScoin ENS Namehash 
 
-A javascript library for generating Ethereum Name Service (ENS) namehashes per [spec](https://github.com/ethereum/EIPs/issues/137).
+A javascript library for generating PUFFScoin Decentralized Name Service (ENS) namehashes per [spec](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-137.md).
 
-[Available on NPM](https://www.npmjs.com/package/eth-ens-namehash)
 
 ## Installation
 
-`npm install eth-ens-namehash -S`
+`npm install puffs-ens-namehash -S`
 
 ## Usage
 
 ```javascript
-var namehash = require('eth-ens-namehash')
+var namehash = require('puffs-ens-namehash')
 var hash = namehash.hash('foo.eth')
 // '0xde9b09fd7c5f901e23a3f19fecc54828e9c848539801e86591bd9801b019f84f'
 
@@ -24,10 +23,10 @@ var normalized = namehash.normalize(input)
 
 ENS Supports UTF-8 characters, and so many duplicate names are possible. For example:
 
-- faceboоk.eth
-- facebook.eth
+- hightimes.puffs
+- hightimes.puffs
 
-The first one has non-ascii chars. (control+F on this page and search for facebook, only the second one will match).
+The first one has non-ascii chars. (control+F on this page and search for hightimes, only the second one will match).
 
 namehash.normalize() doesn't automagically remap those, and so other precautions should be taken to avoid user phishing.
 
