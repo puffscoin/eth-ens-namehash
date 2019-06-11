@@ -19,26 +19,26 @@ test('empty param', (t) => {
   t.equal(output, expected)
 })
 
-test('TLD eth', (t) => {
+test('TLD puffs', (t) => {
   t.plan(1)
-  const input = 'eth'
-  const expected = '0x93cdeb708b7545dc668eb9280176169d1c33cfd8ed6f04690a0bcc88a93fc4ae'
+  const input = 'puffs'
+  const expected = '00xca8c1ae34d751f0f90ce84e46231d0a7a59d5126efbc18a34621aac0b118f888'
   const output = namehash.hash(input)
   t.equal(output, expected)
 })
 
-test('foo.eth', (t) => {
+test('foo.puffs', (t) => {
   t.plan(1)
-  const input = 'foo.eth'
-  const expected = '0xde9b09fd7c5f901e23a3f19fecc54828e9c848539801e86591bd9801b019f84f'
+  const input = 'foo.puffs'
+  const expected = '0x9140eb58df1e4b69b42036ba27769148ddb31ac2f685c46ff1b02938b6f104b3'
   const output = namehash.hash(input)
   t.equal(output, expected)
 })
 
 test('normalize ascii domain', (t) => {
   t.plan(1)
-  const input = 'foo.eth' // latin chars only
-  const expected = 'foo.eth'
+  const input = 'foo.puffs' // latin chars only
+  const expected = 'foo.puffs'
   const output = namehash.normalize(input)
   t.equal(output, expected)
 })
@@ -46,8 +46,8 @@ test('normalize ascii domain', (t) => {
 
 test('normalize international domain', (t) => {
   t.plan(1)
-  const input = 'fоо.eth' // with cyrillic 'o'
-  const expected = 'xn--f-1tba.eth'
+  const input = 'fоо.puffs' // with cyrillic 'o'
+  const expected = 'xn--f-1tba.puffs'
   const output = namehash.normalize(input)
   t.equal(output, expected)
 })
